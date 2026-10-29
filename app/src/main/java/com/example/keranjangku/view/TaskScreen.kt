@@ -72,7 +72,7 @@ fun InputSection(
         OutlinedTextField(
             value = uiState.inputText,
             onValueChange = onValueChange,
-            label = { Text("Nama Barang Belanjaan") },
+            label = { Text("List Barang Belanjaan") },
             isError = uiState.errorMessage != null,
             modifier = Modifier.fillMaxWidth()
         )
@@ -89,7 +89,7 @@ fun InputSection(
             onClick = onAddTask,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Tambah ke Belanjaan")
+            Text("Tambahkan Barang")
         }
     }
 }
@@ -103,7 +103,7 @@ fun TaskListSection(
 ) {
     if (uiState.tasks.isEmpty()) {
         Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            Text("Belum ada barang di keranjang. Yuk catat!", color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text("Yuk catat! Sebelum Belanja.", color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     } else {
         LazyColumn(modifier = modifier.fillMaxSize()) {
