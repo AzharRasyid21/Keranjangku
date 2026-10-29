@@ -6,7 +6,9 @@ data class Task(
     val id: String = UUID.randomUUID().toString(),
     val title: String,
     val isCompleted: Boolean = false
-)
+){
+    val displayTitle: String get() = title.trim()
+}
 
 data class TaskUiState(
     val tasks: List<Task> = emptyList(),

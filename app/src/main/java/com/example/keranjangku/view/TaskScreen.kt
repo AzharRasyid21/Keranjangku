@@ -130,7 +130,7 @@ fun TaskItem(task: Task, onDelete: () -> Unit, onToggle: () -> Unit) {
         ) {
             Checkbox(checked = task.isCompleted, onCheckedChange = { onToggle() })
             Text(
-                text = task.title,
+                text = task.displayTitle,
                 modifier = Modifier.weight(1f).padding(horizontal = 8.dp),
                 style = if (task.isCompleted) MaterialTheme.typography.bodyLarge.copy(
                     textDecoration = TextDecoration.LineThrough
